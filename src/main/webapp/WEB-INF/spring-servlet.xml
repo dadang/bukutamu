@@ -25,6 +25,13 @@
 	<!-- sehingga tetap bisa mengakses folder selain WEB-INF, misalnya img, 
 		css, js -->
 	<mvc:default-servlet-handler />
+
+	<!-- handle pesan error -->
+	<bean class="org.springframework.context.support.ResourceBundleMessageSource"
+		id="messageSource">
+		<property name="basename" value="label"/>
+	</bean>
+	
 	
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
